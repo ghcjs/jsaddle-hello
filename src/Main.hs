@@ -11,5 +11,5 @@ main = runWebGUI $ \ webView -> do
     runjs $ do
         document <- jsg "document"
         let body = js "body"
-            innerHtml = jss "innerHTML"
-        document ^. body ^. innerHtml "<h1>Hello World</h1>"
+            setInnerHTML = jss "innerHTML"
+        document ^. body ^. setInnerHTML "<h1>Hello World</h1>"
