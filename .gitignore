@@ -1,2 +1,4 @@
 /dist/
 *.lkshf
+.cabal-sandbox
+cabal.sandbox.config
