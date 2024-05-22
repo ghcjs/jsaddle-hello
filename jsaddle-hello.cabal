@@ -30,7 +30,7 @@ library
     build-depends:
         base >=4.2 && <5,
         jsaddle >=0.8.0.0 && <0.10,
-        lens >=4.0.7 && <5.3,
+        lens >=4.0.7 && <5.4,
         text >=1.2.2.1 && <2.2
     exposed-modules: JSaddleHello
     hs-source-dirs: src
@@ -42,11 +42,13 @@ executable jsaddle-hello
         base >=4.2 && <5,
         jsaddle-hello -any,
         jsaddle-warp >=0.8.0.0 && <0.10,
-        lens >=4.0.7 && <5.3,
+        lens >=4.0.7 && <5.4,
         text >=1.2.2.1 && <2.2
     hs-source-dirs: src-exe
     ghc-options: -threaded
     default-language: Haskell2010
+    if arch(javascript) && impl(ghc >= 9.10.1)
+      ghc-options: -ddisable-js-c-sources
 
 executable jsaddle-hello-webkitgtk
     if impl(ghcjs) || arch(javascript) || os(osx)
@@ -56,7 +58,7 @@ executable jsaddle-hello-webkitgtk
         base >=4.2 && <5,
         jsaddle-hello -any,
         jsaddle-webkit2gtk >=0.8.0.0 && <0.10,
-        lens >=4.0.7 && <5.3,
+        lens >=4.0.7 && <5.4,
         text >=1.2.2.1 && <2.2
     hs-source-dirs: src-exe
     ghc-options: -threaded
@@ -70,7 +72,7 @@ executable jsaddle-hello-wkwebview
         base >=4.2 && <5,
         jsaddle-hello -any,
         jsaddle-wkwebview >=0.8.1.0 && <0.10,
-        lens >=4.0.7 && <5.3,
+        lens >=4.0.7 && <5.4,
         text >=1.2.2.1 && <2.2
     hs-source-dirs: src-exe
     ghc-options: -threaded
