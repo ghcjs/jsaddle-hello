@@ -21,11 +21,6 @@ source-repository head
     type: git
     location: https://github.com/ghcjs/jsaddle-hello
 
---custom-setup
---  setup-depends: base >= 4.6,
---                 Cabal >= 3.0 && < 3.11,
---                 cabal-macosx >= 0.2.3.4 && < 0.3
-
 library
     build-depends:
         base >=4.2 && <5,
