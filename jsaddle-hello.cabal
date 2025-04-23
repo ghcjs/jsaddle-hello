@@ -1,6 +1,6 @@
 cabal-version: 3.0
 name: jsaddle-hello
-version: 2.0.0.1
+version: 2.0.0.2
 build-type: Simple
 license: MIT
 license-file: LICENSE
